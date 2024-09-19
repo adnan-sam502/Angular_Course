@@ -1,0 +1,22 @@
+<app-card>
+    <button [class.active]="selected" (click)="onSelectUser()">
+        <!-- <img
+            [src]="'assets/users/' + selectedUser.avatar"
+            [alt]="selectedUser.name"
+        /> -->
+        <!-- <-- Signal Approach --> 
+        <!-- <img
+            [src]="imagePath()"
+            [alt]="name()"
+        /> -->
+        <!-- <-- Normal Decorator Approach --> 
+        <img
+            [src]="imagePath"
+            [alt]="user.name"
+        />
+        <!-- <span>{{ selectedUser().name }}</span> -->
+        <!-- <span>{{ name() }}</span> -->
+        <!-- If name is not signal then write -->
+        <span>{{ user.name }}</span>
+    </button>
+</app-card>
